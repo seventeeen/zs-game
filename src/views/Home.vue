@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Intro v-on:clicked="isIntro = false" v-if="isIntro"></Intro>
+    <div v-else>
+      asdf
+      <Controller></Controller>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Intro from '@/components/Intro.vue'
+import Controller from '@/components/Controller.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Intro,
+    Controller
+  },
+  data () {
+    return {
+      isIntro: true
+    }
   }
 }
 </script>

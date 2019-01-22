@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "firebase": "^5.8.0",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.21",
@@ -41,6 +42,9 @@
       "parser": "babel-eslint"
     }
   },
+  "eslintIgnore": [
+    "src/assets"
+  ],
   "postcss": {
     "plugins": {
       "autoprefixer": {}
